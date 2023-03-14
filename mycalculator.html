@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="mycalculator.css">
+    <title>Calculator</title>
+
+
+
+	<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+		integrity=
+"sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
+</head>
+<body class="container">
+
+
+    <div class=" d-flex justify-content-center">
+
+        <div class="calculator" id="calculator">
+            <form action="" class="form-control w-100 bg-danger-subtle border-2 border-dark">
+                <div class="row">
+                    <div class="col-9">
+                        <input type="text" class="w-100" id="inputBox">
+                    </div>
+                    <div class="col-3">
+                        <button type="button" onclick="clr()">c</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <button type="button" onclick="display(9)">9</button>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" onclick="display('8')">8</button>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" onclick="display('7')">7</button>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" value="+" onclick="operator(operation[0])" id="plus">+</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <button type="button" onclick="display('6')">6</button>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" onclick="display('5')">5</button>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" onclick="display('4')">4</button>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" onclick="operator(operation[1])" id="minus">-</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <button type="button" onclick="display('3')">3</button>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" onclick="display('2')">2</button>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" onclick="display('1')">1</button>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" onclick="operator(operation[2])">*</button>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-3">
+                        <button type="button" onclick="display('.')">.</button>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" onclick="display('0')">0</button>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" onclick="total()">=</button>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" onclick="operator(operation[3])" id="divide">/</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class=" d-flex justify-content-center">
+        <button id="show" onclick="showCalc()">
+             Show the calculator.
+        </button>
+        <button id="hide" onclick="hideCalc()">
+            Hide the calculator.
+       </button>
+    </div>
+
+
+
+
+    <script src="mycalculator.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
